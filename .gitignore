@@ -1,288 +1,125 @@
 # ============================================
-# PlayNxt - Sports Community & Booking Platform
+# PlayNxt - Git Ignore Configuration
 # ============================================
 
-# ============================================
-# OS Generated Files
-# ============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-*.swp
-*.swo
-*~
-
-# ============================================
-# IDE & Editor Files
-# ============================================
-# JetBrains IDEs (IntelliJ, WebStorm, Android Studio)
-.idea/
-*.iml
-*.ipr
-*.iws
-.idea_modules/
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# Vim
-*.vim
-Session.vim
-
-# ============================================
-# Node.js / JavaScript / TypeScript
-# ============================================
+# Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-lerna-debug.log*
-.npm
-.yarn/
-.pnp.*
-.eslintcache
-.node_repl_history
-*.tsbuildinfo
 
-# Build outputs
+# Expo
+.expo/
 dist/
-build/
-out/
-.next/
-.nuxt/
-.cache/
+web-build/
+expo-env.d.ts
 
-# ============================================
-# React Native
-# ============================================
-# Android
-android/.gradle/
-android/app/build/
-android/build/
-android/local.properties
-android/*.iml
-android/.idea/
-android/captures/
-android/.externalNativeBuild/
-android/.cxx/
+# Native builds
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Android/iOS builds
+android/
+ios/
 *.apk
 *.aab
-*.jks
-*.keystore
-
-# iOS
-ios/Pods/
-ios/Podfile.lock
-ios/build/
-ios/*.xcworkspace
-!ios/*.xcworkspace/contents.xcworkspacedata
-ios/*.xcodeproj/xcuserdata/
-ios/*.xcodeproj/project.xcworkspace/
-ios/DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
 
-# React Native specific
-.expo/
-.expo-shared/
-*.hprof
-*.bundle
+# Metro bundler
+.metro-health-check*
 
-# ============================================
-# Flutter
-# ============================================
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
-build/
-flutter_*.png
-linked_*.ds
-unlinked.ds
-unlinked_spec.ds
-*.lock
-!pubspec.lock
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
 
-# ============================================
-# Java / Kotlin / Gradle
-# ============================================
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-hs_err_pid*
-replay_pid*
+# macOS
+.DS_Store
+*.pem
+.AppleDouble
+.LSOverride
 
-# Gradle
-.gradle/
-**/build/
-!src/**/build/
-gradle-app.setting
-!gradle-wrapper.jar
-.gradletasknamecache
+# Windows
+Thumbs.db
+ehthumbs.db
 
-# Maven
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
+# Linux
+*~
 
-# ============================================
-# Go
-# ============================================
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-*.test
-*.out
-go.work
-vendor/
-
-# ============================================
-# Python (for scripts/tools)
-# ============================================
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
-ENV/
-.env
-*.egg-info/
-.eggs/
-*.egg
-.mypy_cache/
-.pytest_cache/
-
-# ============================================
-# Environment & Configuration
-# ============================================
+# Environment files - NEVER commit these
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-*.env
+.env.*.local
+.env.development
+.env.qa
+.env.staging
+.env.production
 
-# Config files with secrets
-config/local.yml
-config/local.json
-secrets/
-*.pem
-*.key
-*.crt
-*.p12
+# Keep example env file
+!.env.example
 
-# ============================================
-# Logs & Databases
-# ============================================
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Local databases
-*.sqlite
-*.sqlite3
-*.db
-*.sql.gz
-dump.rdb
-
-# ============================================
-# Testing & Coverage
-# ============================================
-coverage/
-.nyc_output/
-*.lcov
-.coverage
-htmlcov/
-test-results/
-jest-results/
-playwright-report/
-test-report.xml
-
-# ============================================
-# Docker
-# ============================================
-docker-compose.override.yml
-.docker/
-
-# ============================================
-# Cloud & Infrastructure
-# ============================================
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.*
-*.tfvars
-crash.log
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Kubernetes
-*.kubeconfig
-kubeconfig
-
-# AWS
-.aws/
-aws-credentials
-
-# ============================================
-# Misc
-# ============================================
-*.bak
-*.tmp
-*.temp
-*.orig
-*.rej
-*.patch
-
-# Package files
-*.zip
-*.tar.gz
-*.rar
-*.7z
-
-# Compiled binaries
-bin/
-*.o
-
-# Documentation builds
-docs/_build/
-site/
+# TypeScript
+*.tsbuildinfo
 
 # Temporary files
-tmp/
-temp/
-.tmp/
-.temp/
+*.log
+*.tmp
+*.temp
+*.cache
 
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Testing
+coverage/
+.jest/
+__snapshots__/
+
+# EAS Build
+.eas/
+
+# Secrets - NEVER commit
+secrets/
+*.secret
+*.secrets
+
+# Bundle analysis
+bundle-stats.json
+*.stats.html
+
+# Sentry
+.sentryclirc
+
+# Miscellaneous
+*.bak
+*.backup
+.jest/
+
+# Build outputs
+build/
+out/
+
+# Expo EAS
+.easignore
+
+# Android/iOS specific
+android/
+ios/
+
+# Misc
+*.hprof
+
+
+# @generated expo-cli sync-2b81b286409207a5da26e14c78851eb30d8ccbdb
+# The following patterns were generated by expo-cli
+
+expo-env.d.ts
+# @end expo-cli
